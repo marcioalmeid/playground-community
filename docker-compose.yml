@@ -38,7 +38,6 @@ services:
       - "16686:16686"
       - "14268:14268"
   elasticsearch:
-    mem_limit: 300m
     image: elasticsearch:8.4.1
     environment:
       - "discovery.type=single-node"
