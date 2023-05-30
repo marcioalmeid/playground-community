@@ -247,12 +247,9 @@
       ],
       "extra_config": {
         "auth/validator": {
-          "alg": "HS256",
-          "audience": ["http://api.example.com"],
-          "roles_key": "roles",
-          "issuer": "https://krakend.io",
-          "roles": ["role_a", "role_c"],
-          "jwk_url": "http://fake_api:8080/jwk/symmetric.json",
+          "alg": "RS256",
+          "jwk_url": "https://auth2.bexse.appibride.com/auth/realms/master/protocol/openid-connect/certs",
+          "issuer": "https://auth2.bexse.appibride.com/auth/realms/master",          
           "disable_jwk_security": true
         }
       }
