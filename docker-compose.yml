@@ -1,9 +1,9 @@
 version: "3.4"
-networks:
-  keycloak-net:
+# networks:
+  # keycloak-net:
 
 volumes:
-  keycloak-db:
+  # keycloak-db:
   portainer_data:
 
 services:  
