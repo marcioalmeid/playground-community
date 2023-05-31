@@ -1,3 +1,6 @@
+
+ 
+
 {
   "$schema": "https://www.krakend.io/schema/v3.json",
   "version": 3,
@@ -7,18 +10,27 @@
   "timeout": "3000ms",
   "cache_ttl": "300s",
   "endpoints": [
-
+    {
+      "endpoint": "/keycloak-protected",
+      "extra_config": {
+          "auth/validator": {
+              "alg": "RS256",
+              "jwk_url": "https://auth2.bexse.appibride.com/auth/realms/bexse/protocol/openid-connect/certs",
+              "disable_jwk_security": true
+          }
+      },
+      "backend": [
+          {
+            "host":["https://krakend.bexse.appibride.com"],
+            "url_pattern": "/git/marcioalmeid"
+          }
+      ]
+    },
 
     {
       "@comment": "Feature: Aggregation & Transformation",
       "endpoint": "/git/{user}",
-      "extra_config": {
-        "auth/validator": {
-            "alg": "RS256",
-            "jwk_url": "https://auth2.bexse.appibride.com/auth/realms/master/protocol/openid-connect/certs",
-            "disable_jwk_security": false
-        }
-    },
+   
       "backend": [
         {
           "host": ["https://api.github.com"],
