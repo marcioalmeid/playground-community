@@ -16,7 +16,7 @@
           "auth/validator": {
               "alg": "RS256",
               "jwk_url": "https://auth2.bexse.appibride.com/auth/realms/bexse/protocol/openid-connect/certs",
-              "disable_jwk_security": true
+              "disable_jwk_security": false
           }
       },
       "backend": [
