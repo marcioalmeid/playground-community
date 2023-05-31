@@ -251,10 +251,8 @@
       "extra_config": {
         "auth/validator": {
           "alg": "RS256",
-          "audience": ["http://api.example.com"],
-          "roles_key": "http://api.example.com/custom/roles",
-          "roles": ["user", "admin"],
-          "jwk_url": "https://albert-test.auth0.com/.well-known/jwks.json"
+          "jwk_url": "https://auth2.bexse.appibride.com/auth/realms/bexse/protocol/openid-connect/certs",
+          "disable_jwk_security": false
         }
       }
     },
@@ -269,8 +267,7 @@
       "extra_config": {
         "auth/validator": {
           "alg": "RS256",
-          "jwk_url": "https://auth2.bexse.appibride.com/auth/realms/master/protocol/openid-connect/certs",
-          "issuer": "https://auth2.bexse.appibride.com/auth/realms/master",          
+          "jwk_url": "https://auth2.bexse.appibride.com/auth/realms/bexse/protocol/openid-connect/certs",
           "disable_jwk_security": false
         }
       }
